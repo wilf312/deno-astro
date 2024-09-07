@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 // To use Deno KV, swiitch this import to "resources_kv" in the same directory
 import { addResource, listResources, Resource } from "../data/resources";
+import { Button } from "@/components/ui/button"
 
 // Process form submission if required
 if (Astro.request.method === "POST") {
@@ -32,6 +33,7 @@ const resources: Resource[] = await listResources();
     <h1>Welcome to <span class="text-gradient">Deno 🦕</span></h1>
     <div class="news-form">
       <p>
+        <Button>hello world</Button>
       Welcome to Deno! Add your own links and resources using the form below.
       </p>
       <hr/>
